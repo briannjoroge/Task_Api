@@ -21,7 +21,7 @@ app.get("/task", async (req , res) => {
         });
     res.status(200).json(taskApi)
     } catch (e) {
-        console.error("Database Query Error:", error);
+        // console.error("Database Query Error:", error);
         res.status(500).json({ message: "Something went Wrong"})
     }
 })
