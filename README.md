@@ -1,7 +1,9 @@
 # Task API
-A simple **Task API** built with **Express.js** and **Prisma ORM**. 
 
-## Feetures 
+A simple **Task API** built with **Express.js** and **Prisma ORM**.
+
+## Feetures
+
 - Get all tasks
 - Get a specific task by ID
 - Create a new task
@@ -11,30 +13,36 @@ A simple **Task API** built with **Express.js** and **Prisma ORM**.
 ## API Querries Used
 
 ### GET `/`
+
 - Displays a welcome message and basic API usage commands.
 
 ### GET `/task`
+
 - Displays all tasks in json format.
 
 ### GET `/task/:id`
+
 - Displays one specific task by ID.
 
 ### POST `/task`
-- Creates a new task. 
-Use it in Postman API development and testing tool.
-Make sure you select Body > raw > JSON to run this command.
 
-```json 
+- Creates a new task.
+  Use it in Postman API development and testing tool.
+  Make sure you select Body > raw > JSON to run this command.
+
+```json
 {
-    "title": "{{$randomLoremWord}}",
-    "description": "{{$randomLoremSentence}}"
+  "title": "{{$randomLoremWord}}",
+  "description": "{{$randomLoremSentence}}"
 }
 ```
 
 ### PATCH `/task/:id`
+
 Updates a task by ID, specified in http link.
 
-**Body:**  
+**Body:**
+
 ```json
 {
   "title": "Updated title",
@@ -43,6 +51,7 @@ Updates a task by ID, specified in http link.
 ```
 
 ### DELETE `/task/:id`
+
 Soft-deletes a task by setting `isCompleted` to `true`.
 This hides the data from the user.
 
